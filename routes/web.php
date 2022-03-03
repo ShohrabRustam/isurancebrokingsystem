@@ -14,7 +14,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('layouts.master');
+    return view('home');
+});
+
+Route::get('about', function () {
+    return view('about');
+});
+Route::get('contact', function () {
+    return view('contact');
+});
+Route::get('HealthInsurance', function () {
+    return view('InsuranceType.health');
+});
+Route::get('BikeInsurance', function () {
+    return view('InsuranceType.bike');
+});
+Route::get('CarInsurance', function () {
+    return view('InsuranceType.car');
+});
+
+Route::get('login', function () {
+    return view('login');
 });
 

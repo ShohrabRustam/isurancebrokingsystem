@@ -302,7 +302,7 @@ ul li:hover{
                 </a>
 
                   <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-                    <li> <a class="dropdown-item" href="/logout">Logout</a></li>
+                    <li> <a class="dropdown-item" href="logout">Logout</a></li>
 
                   </ul>
 
