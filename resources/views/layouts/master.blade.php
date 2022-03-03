@@ -37,7 +37,7 @@ footer{
 }
 
 </style>
-    @yield('title')
+    <title>@yield('title')</title>
 </head>
   <body>
       {{-- set the header  --}}
