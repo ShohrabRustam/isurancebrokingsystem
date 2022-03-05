@@ -41,7 +41,7 @@ Home
             <a href="BikeInsurance" >
             <img src="https://images.ctfassets.net/uwf0n1j71a7j/3hsbWvbJauXM1g4VTLDn6A/c0bdbe4ea5cf6b57e0547db4e268d95b/motor-insurance-policy-online.png" class="card-img-top" alt="..." style="    max-width:20rem;    max-height:10rem; min-width:20rem; min-height:10rem;  ">
             <div class="card-body">
-              <h5 class="card-title">Bike Insurance</h5>
+              <h5 class="card-title">Car Insurance</h5>
               {{-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
 
               </a>
@@ -54,7 +54,7 @@ Home
             <a href="CarInsurance" >
             <img src="https://www.bharti-axagi.co.in/drupal_backend/sites/default/files/2019-07/vector-smart-object%402x.png" class="card-img-top" alt="..." style="max-width:20rem; max-height:10rem; min-width:20rem; min-height:10rem; ">
             <div class="card-body">
-              <h5 class="card-title">Car Insurance</h5>
+              <h5 class="card-title">Bike Insurance</h5>
               {{-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
 
               </a>
@@ -63,6 +63,8 @@ Home
     </div>
 
   </div>
+
+
 
 @endsection
 
