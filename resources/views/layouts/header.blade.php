@@ -268,6 +268,7 @@ ul li:hover{
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li><a class="dropdown-item" href="HealthInsurance">Health Insurance</a><li>
+                <li> <a class="dropdown-item" href="LifeInsurance">Life Insurance </a></li>
                 <li><a class="dropdown-item" href="CarInsurance">BIke Insurance</a></li>
                 <li> <a class="dropdown-item" href="BikeInsurance">Car Insurance </a></li>
                 </ul>
@@ -280,7 +281,7 @@ ul li:hover{
                   Your Policies </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li><a class="dropdown-item" href="#"></a>Your Health Policies<li>
-                <li><a class="dropdown-item" href="#"></a>Your Motor Policies</li>
+                <li><a class="dropdown-item" href="#"></a>Your Bike Policies</li>
                 <li> <a class="dropdown-item" href="#"></a> Claim</li>
                 </ul>
             </li>

@@ -29,6 +29,9 @@ Route::get('contact', function () {
 Route::get('HealthInsurance', function () {
     return view('InsuranceType.health');
 });
+Route::get('LifeInsurance', function () {
+    return view('InsuranceType.life');
+});
 Route::get('BikeInsurance', function () {
     return view('InsuranceType.bike');
 });
