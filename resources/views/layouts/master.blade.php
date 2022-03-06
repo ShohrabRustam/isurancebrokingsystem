@@ -27,21 +27,6 @@
 
       {{-- set the header  --}}
     @include('layouts.header')
-    <header class="hero-section">
-        <div class="hero-text-container">
-          <h1>Humanizing<br />Your Insurance.</h1>
-          <p
-            >Get your life insurance coverage easier and faster. We blend our
-            expertize<br />
-            and technology to help you find the plan that's right for you.Ensure
-            you<br />
-            and your loved ones are protected.</p>
-        </div>
-        <div class="hero-img-container">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY73KVR4_cWOoY4_UUodQsSj95lWkPg1gfhQ&usqp=CAU" >
-        </div>
-      </header>
-
 
     @yield('section')
 

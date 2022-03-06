@@ -247,7 +247,7 @@ ul li:hover{
 </script>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-expand-lg navbar-dark bg-light">
+<nav class="navbar navbar-default navbar-expand-lg navbar-dark bg-light" style="margin-top:10px; ">
 	<div class="navbar-header">
 		<a class="navbar-brand" href="/">m<b>Brokerage</b></a>
 		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">

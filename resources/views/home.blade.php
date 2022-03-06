@@ -7,6 +7,23 @@ Home
 
 @section('section')
 
+<header class="hero-section">
+    <div class="hero-text-container">
+      <h1>Humanizing<br />Your Insurance.</h1>
+      <p
+        >Get your life insurance coverage easier and faster. We blend our
+        expertize<br />
+        and technology to help you find the plan that's right for you.Ensure
+        you<br />
+        and your loved ones are protected.</p>
+    </div>
+    <div class="hero-img-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY73KVR4_cWOoY4_UUodQsSj95lWkPg1gfhQ&usqp=CAU" >
+    </div>
+  </header>
+
+
+
 <div class="row row-cols-1 row-cols-md-4 g-4 align-self-center" >
     <div class="col" style="width: auto; margin:3rem; ">
         <div class="card" style="width: 20rem; background-color:rgb(225, 224, 233); border-radius:20px">
