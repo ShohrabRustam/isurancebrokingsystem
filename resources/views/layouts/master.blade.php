@@ -22,7 +22,7 @@
 
 <style>
     body {
-    background-color: rgb(192, 201, 229);
+    background-color: rgb(211, 233, 182);
     display: flex;
     flex-direction: column;
     color: rebeccapurple;

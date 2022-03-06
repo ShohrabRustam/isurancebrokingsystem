@@ -5,7 +5,7 @@ Contact
 @endsection
 
 @section('section')
-<div class="container card center" style="text-align: center; background-color:beige">
+<div class="container card center" style="text-align: center; background-color:rgb(211, 233, 182)">
 
     <!--Google map-->
   <div id="map-container-google-1" class="z-depth-1-half map-container">
