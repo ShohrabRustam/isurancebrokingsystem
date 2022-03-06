@@ -7,10 +7,9 @@ About
 @section('section')
 <div class="container">
     <div class="page-header text-center scrap-container">
-      <h1>About Us</h1>
       <hr size="8">
       <div class="imgdimres"><img src="http://www.interestingreality.com/wp-content/uploads/2020/01/Insurance-broking.jpg" alt="About mBrockerage" class="page-header imgdimres"
-          height="600px">
+          height=500px">
       </div>
       <div style="margin-left:30px; margin-right:30px; text-align:justify; text-justify:inter-word" >
         <p>mBrockage is an insurance broker software for insurance brokers enabling in the design of customised and personalised software solutions for customers and insurance management.
@@ -23,7 +22,6 @@ About
 
 
         </p>
-        <br><br>
         <div class="row " >
           <h1 class="col-sm-12 center" style="text-align: center;">What Our Customer Say</h1>
         </div>

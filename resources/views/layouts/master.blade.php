@@ -20,28 +20,28 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-<style>
-    body {
-    background-color: rgb(211, 233, 182);
-    display: flex;
-    flex-direction: column;
-    color: rebeccapurple;
-    height: 100vh;
-}
-footer{
-    text-align: center;
-    background-color: rgb(231, 191, 252);
-    width: 100vw;
-    height: 5rem;
-    margin-top: auto;
-}
-
-</style>
+@include('layouts.style')
     <title>@yield('title')</title>
 </head>
   <body>
+
       {{-- set the header  --}}
     @include('layouts.header')
+    <header class="hero-section">
+        <div class="hero-text-container">
+          <h1>Humanizing<br />Your Insurance.</h1>
+          <p
+            >Get your life insurance coverage easier and faster. We blend our
+            expertize<br />
+            and technology to help you find the plan that's right for you.Ensure
+            you<br />
+            and your loved ones are protected.</p>
+        </div>
+        <div class="hero-img-container">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY73KVR4_cWOoY4_UUodQsSj95lWkPg1gfhQ&usqp=CAU" >
+        </div>
+      </header>
+
 
     @yield('section')
 

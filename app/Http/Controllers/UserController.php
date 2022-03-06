@@ -28,5 +28,34 @@ class UserController extends Controller
 
 
     }
+    public function registration(Request $req){
+
+        $req->validate([
+            "name" => "required|min:3",
+            "email"=>"required|email|unique:user_registration",
+            "password" => "required|min:6|max:16",
+            "confirm_password" => "required_with:password|same:password|min:6"
+        ]);
+
+        $user=new user_registration();
+        $user->name=$req->name;
+        $user->email=$req->email;
+        $user->password=Hash::make($req->password);
+        $user->save();
+
+        return redirect('login');
+        // $user= users::where(['email'=>$req->email])->first();
+        // if(!$user || !check($req->password,$user->confirm_password) ){
+        //     return back()->with("fail" ,"Password is not match");
+        // }
+        // else{
+        //     return redirect('about');
+        // }
+        // dd($a);
+        // return view('login')->with('loginError',$a);
+
+
+
+    }
     //
 }

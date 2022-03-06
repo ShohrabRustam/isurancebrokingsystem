@@ -56,4 +56,7 @@ Route::get('registration', function () {
     return view('registration');
 });
 
+Route::post('registration',[UserController::class,'registration']);
+
+
 
