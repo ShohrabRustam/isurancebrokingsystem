@@ -20,8 +20,9 @@ class CheckUser
 
         // echo "Check User middleware is Applied  or not on route";
 
-        if(($request->path()=="login") && ($request->session()->has("user")))
+        if((($request->path()=="login") || ($request->path()=="registration")) && ($request->session()->has("user")))
         {
+
             return redirect('/');
         }
 

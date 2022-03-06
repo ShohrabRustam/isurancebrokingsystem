@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\UserController;
 use App\Models\user_registration;
@@ -55,5 +56,8 @@ Route::get('registration', function () {
 
 Route::post('registration',[UserController::class,'registration']);
 
+Route::get('adminPage',function(){
+    view('adminPage');
+});
 
 
