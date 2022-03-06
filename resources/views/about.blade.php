@@ -24,7 +24,7 @@ About
 
         </p>
         <br><br>
-        <div class="row">
+        <div class="row " >
           <h1 class="col-sm-12 center" style="text-align: center;">What Our Customer Say</h1>
         </div>
         <hr>
@@ -43,7 +43,7 @@ About
           </div>
           <div class="row home-tile">
             <div class="col-sm-6 home-tile-graphics">
-              <div class="center home-grid"><img src="https://thumbs.dreamstime.com/b/shoulder-portrait-thirty-years-old-bearded-man-young-adult-136889723.jpg" alt="Technological touch to traditional ways" class="right home-grid"  style="max-height: 200px; max-width:150px padding:20%">
+              <div class="center home-grid"><img src="https://thumbs.dreamstime.com/b/shoulder-portrait-thirty-years-old-bearded-man-young-adult-136889723.jpg" alt="Technological touch to traditional ways" class="right home-grid"  style="max-height: 200px; max-width:150px;">
               </div>
             </div>
             <div class="col-sm-6 home-title-text">
