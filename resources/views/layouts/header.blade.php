@@ -268,9 +268,16 @@ ul li:hover{
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li><a class="dropdown-item" href="HealthInsurance">Health Insurance</a><li>
+                <div class="dropdown-divider"></div>
                 <li> <a class="dropdown-item" href="LifeInsurance">Life Insurance </a></li>
+                <div class="dropdown-divider"></div>
                 <li><a class="dropdown-item" href="CarInsurance">BIke Insurance</a></li>
+                <div class="dropdown-divider"></div>
                 <li> <a class="dropdown-item" href="BikeInsurance">Car Insurance </a></li>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-divider"></div>
+
+                <li> <a class="dropdown-item" href="#">More Insurance Blog</a></li>
                 </ul>
             </li>
             <li><a href="contact">Contact</a></li>
@@ -280,8 +287,15 @@ ul li:hover{
                 <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Your Policies </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#"></a>Your Health Policies<li>
-                <li><a class="dropdown-item" href="#"></a>Your Bike Policies</li>
+                <li><a class="dropdown-item" href="#"></a>Your Life Insurance Policies<li>
+                <div class="dropdown-divider"></div>
+                <li><a class="dropdown-item" href="#"></a>Your Health Insurance Policies<li>
+                <div class="dropdown-divider"></div>
+                <li><a class="dropdown-item" href="#"></a>Your Bike Insurance Policies</li>
+                <div class="dropdown-divider"></div>
+                <li><a class="dropdown-item" href="#"></a>Your Car Insurance Policies</li>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-divider"></div>
                 <li> <a class="dropdown-item" href="#"></a> Claim</li>
                 </ul>
             </li>
@@ -294,7 +308,7 @@ ul li:hover{
                 @if(!Session::has('user'))
                 <a  class="" href="login">Login</a>
     			<li>
-                <a href="registration" class="btn btn-primary get-started-btn mt-1 mb-1">Sign up</a>
+                <a href="registration" class=" ">Sign up</a>
 
                 @else
 
