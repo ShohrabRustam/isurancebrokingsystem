@@ -74,5 +74,41 @@ About
     </div>
   </div>
 
+  <div class="container clearfix"  >
+      <br><br>
+      <table class="table" >
+
+          <tbody>
+              <tr>
+                  <td><div class="mvv_item">
+                    <h3 class="mvv_head">Our Mission</h3>
+                    <div class="mvv_img">
+                       <img src="https://static.pbcdn.in/cdn/images/career/mission.png" alt=""  style="max-height: 200px; max-width:150px; min-width:120px min-height:150px">
+                    </div>
+                    <p>Building a safety net for households in India.</p>
+                 </div>
+             </td>
+                  <td> <div class="mvv_item">
+                    <h3 class="mvv_head">Our Values</h3>
+                    <div class="mvv_img">
+                       <img src="https://static.pbcdn.in/cdn/images/career/values.png" alt=""  style="max-height: 200px; max-width:150px; min-width:120px min-height:150px">
+                    </div>
+                    <p>Fairness to all our stakeholders</p>
+                 </div></td>
+                 <td><div class="mvv_item">
+                    <h3 class="mvv_head">Our Vision</h3>
+                    <div class="mvv_img">
+                       <img src="https://static.pbcdn.in/cdn/images/career/vision.png" alt=""  style="max-height: 200px; max-width:150px; min-width:120px min-height:150px">
+                    </div>
+                    <p>A healthy and well-protected India</p>
+                 </div></td>
+              </tr>
+          </tbody>
+
+      </table>
+
+
+ </div>
+
 @endsection
 
