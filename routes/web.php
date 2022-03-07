@@ -4,6 +4,8 @@ use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\UserController;
 use App\Models\user_registration;
+use Illuminate\Support\Facades\Session;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -42,22 +44,25 @@ Route::get('login', function () {
     return view('login');
 });
 
+Route::post('login', [UserController::class,'login']);
+
+
+Route::get('registration', function () {
+    return view('registration');
+});
+
 Route::get('logout', function(){
     Session::forget('user');
     return redirect('login');
 });
 
 
-Route::post('login', [UserController::class,'login']);
-
-Route::get('registration', function () {
-    return view('registration');
-});
-
 Route::post('registration',[UserController::class,'registration']);
 
-Route::get('adminPage',function(){
-    view('adminPage');
+Route::get('admin',function(){
+
+    return view('Admin.master');
+
 });
 
 
