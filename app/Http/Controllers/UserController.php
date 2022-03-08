@@ -16,7 +16,7 @@ class UserController extends Controller
         ]);
 
         $user= user_registration::where(['email'=>$req->email])->first();
-        if(!$user || !Hash::check($req->password,$user->password) ){
+        if(!$user || ($req->password!=$user->password) ){
             return back()->with("fail" ,"Email or Password is not Match");
         }
         else
@@ -40,7 +40,8 @@ class UserController extends Controller
         $user=new user_registration();
         $user->name=$req->name;
         $user->email=$req->email;
-        $user->password=Hash::make($req->password);
+        // $user->password=Hash::make($req->password);
+        $user->password=$req->password;
         $user->save();
 
         return redirect('login');
