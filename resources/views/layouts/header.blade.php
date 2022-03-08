@@ -1,4 +1,4 @@
-<style>
+{{-- <style>
     body {
     font-family: 'Varela Round', sans-serif;
 }
@@ -237,7 +237,7 @@ ul li:hover{
   font-weight: bold;
 
 }
-</style>
+</style> --}}
 
 <style>
     ul {
@@ -330,21 +330,19 @@ ul li:hover{
                             Insurance Type
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                        <a class="dropdown-item" href="LifeInsurance">
+                            <li> Life Insurance </li>
+                        </a>
                             <a class="dropdown-item" href="HealthInsurance">
                                 <li>Health Insurance
                                 <li>
                             </a>
-                            <a class="dropdown-item" href="BikeInsurance">
-                                <li>Car Insurance </li>
-                            </a>
-                            <a class="dropdown-item" href="LifeInsurance">
-                                <li> Life Insurance </li>
-                            </a>
                             <a class="dropdown-item" href="CarInsurance">
-                                <li>BIke Insurance </li>
+                                <li>Car Insurance </li>
                             </a>
                             <a class="dropdown-item" href="BikeInsurance">
-                                <li>Car Insurance </li>
+                                <li>Bike Insurance </li>
                             </a>
                             <a class="dropdown-item" href="#">
                                 <li> More Insurance Blog </li>
