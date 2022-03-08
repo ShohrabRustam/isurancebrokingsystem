@@ -70,6 +70,7 @@ Route::get('adminlogin', function () {
 
 //Super Admin
 
+//home page of the super admin
 Route::get('superadminhome', function () {
     if (Session::has('user')) {
         return view('SuperAdmin.home');
@@ -77,12 +78,15 @@ Route::get('superadminhome', function () {
     return redirect('superadminlogin');
 });
 
+//superadmin login page
 Route::get('superadminlogin', function () {
     return view('SuperAdmin.superadminlogin');
 });
 
+// super admun login authontication page with data base
 Route::post('superadminlogin', [SuperAdminController::class, 'superadminlogin']);
 
+//all the admin here in this link
 Route::get('adminlist', function () {
     if (Session::has('user')) {
     return view('SuperAdmin.adminlist');
@@ -92,7 +96,7 @@ Route::get('adminlist', function () {
     }
 });
 
-
+//all the user here in admin page
 Route::get('userlist', function () {
     if (Session::has('user')) {
         return view('SuperAdmin.userlist');
@@ -101,6 +105,7 @@ Route::get('userlist', function () {
     }
 });
 
+//logout the super admin
 Route::get('superadminlogout', function () {
     Session::forget('user');
     return redirect('superadminlogin');
