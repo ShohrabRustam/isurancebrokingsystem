@@ -61,3 +61,10 @@ Route::post('registration',[UserController::class,'registration']);
 
 Route::get('admin',[adminController::class,'adminindex']);
 
+Route::get('adminlogin', function () {
+    return view('adminlogin');
+});
+
+Route::get('superadminhome',function(){
+    return view('SuperAdmin.superadmin');
+});
