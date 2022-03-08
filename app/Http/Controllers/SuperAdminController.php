@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\superadmin;
 use Laravel\Ui\Presets\React;
 use App\Models\admin;
+use Illuminate\Support\Facades\Session;
+// use Illuminate\Validation\Validator\validate;
 
 class SuperAdminController extends Controller
 {
@@ -31,10 +33,33 @@ class SuperAdminController extends Controller
         }
     }
 
-
-    public function adminregistration ()
-    {
-       return  view('SuperAdmin.adminregistration');
+    public function adminregistration(){
+        if (Session::has('user'))
+        {
+         return  view('SuperAdmin.adminregistration');
+        }
+        return redirect('superadminlogin');
     }
+
+    public function adminregistrations(Request $req){
+
+        $req->validate([
+            "name" => "required|min:3",
+            "email"=>"required|email|unique:admin",
+            "password" => "required|min:4|max:16",
+            "mobile"=>  "required",
+            "confirm_password" => "required_with:password|same:password|min:6"
+        ]);
+        $admin = new admin();
+        $admin->name=$req->name;
+        $admin->email->$req->email;
+        $admin->mobile=$req->mobile;
+        $admin->password=$req->password;
+        $admin->save();
+        return redirect('Admin.adminlogin');
+
+    }
+
+
 
 }

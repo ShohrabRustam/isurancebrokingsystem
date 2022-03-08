@@ -29,6 +29,13 @@ Admin Registration
         </div>
 
         <div class="row">
+            <i class="fas fa-user"></i>
+            <input name="mobile" type="number" placeholder="Mobile Number" value="{{ old('mobile') }}" required min="6000000000" max="9999999999">
+            <span class="text-danger">@error('mobile') {{ $message }} @enderror</span>
+          </div>
+
+
+        <div class="row">
           <i class="fas fa-lock"></i>
           <input name="password" type="password" placeholder="Password"  required >
           <span class="text-danger">@error('password') {{ $message }}    @enderror</span>

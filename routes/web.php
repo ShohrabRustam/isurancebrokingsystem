@@ -74,7 +74,13 @@ Route::get('adminlogin', function () {
     return view('adminlogin');
 });
 
-Route::get('adminregistration',[SuperAdminController::class,'adminregistration']);
+// Route::get('adminregistration',[SuperAdminController::class,'adminregistration']);
+
+Route::get('adminregistration',function(){
+    return view('SuperAdmin.adminregistration');
+});
+
+Route::post('adminregistration',[SuperAdminController::class,'adminregistrations']);
 
 
 //Super Admin
