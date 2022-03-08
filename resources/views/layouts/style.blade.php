@@ -183,5 +183,8 @@ footer{
     height: 5rem;
     margin-top: auto;
 }
+header{
+    height: 50px;
+}
 
 </style>

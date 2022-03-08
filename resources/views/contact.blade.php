@@ -4,8 +4,17 @@
 Contact
 @endsection
 
+<style>
+
+</style>
+
 @section('section')
-<div class="container card center" style="text-align: center; background-color:rgb(211, 233, 182)">
+<div class="container card center" style="text-align: center; element.style text-align: center;
+    background-color: white;
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+">
 
     <!--Google map-->
   <div id="map-container-google-1" class="z-depth-1-half map-container">
