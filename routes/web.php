@@ -65,6 +65,9 @@ Route::get('adminlogin', function () {
     return view('adminlogin');
 });
 
+
+//Super Admin
+
 Route::get('superadminhome',function(){
-    return view('SuperAdmin.superadmin');
+    return view('SuperAdmin.home');
 });

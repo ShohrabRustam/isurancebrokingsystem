@@ -320,8 +320,8 @@ ul li:hover{
                     </a>
                 </li>
                 <li> <a href="superadminhome">Home </a></li>
-                <li> <a href="superadminhome">Admin </a></li>
-                <li> <a href="superadminhome">User </a></li>
+                <li> <a href="adminlist">Admin List</a></li>
+                <li> <a href="userlist">User List</a></li>
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
@@ -333,7 +333,7 @@ ul li:hover{
                         <a class="dropdown-item" href="adminlogin">
                             <li> Admin Login </li>
                         </a>
-                        <a class="dropdown-item" href="adminsignup">
+                        <a class="dropdown-item" href="adminregistration">
                             <li>Admin SignUp<li>
                         </a>
                     </ul>
@@ -341,7 +341,7 @@ ul li:hover{
                 <li class="dropdown">
                     <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
-                        Admin SignUp/Signin
+                        User SignUp/Signin
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
