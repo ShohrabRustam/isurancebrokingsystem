@@ -334,7 +334,8 @@ ul li:hover{
                             <li> Admin Login </li>
                         </a>
                         <a class="dropdown-item" href="adminregistration">
-                            <li>Admin SignUp<li>
+                            <li>Admin SignUp
+                            <li>
                         </a>
                     </ul>
                 </li>
@@ -349,12 +350,30 @@ ul li:hover{
                             <li> User Login </li>
                         </a>
                         <a class="dropdown-item" href="registration">
-                            <li>User SignUp <li>
+                            <li>User SignUp
+                            <li>
                         </a>
                     </ul>
                 </li>
-                <li class="btn "><a href="superadminlogin">Super Login</a></li>
-            {{-- @if (!Session::has('user'))
+                @if (!Session::has('user'))
+                    <li class="btn "><a href="superadminlogin">Super Login</a></li>
+                @else
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                            Session::get('user')['name']
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="logout">
+                                <li>Log Out</li>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                        </ul>
+                    </li>
+                @endif
+
+
+                {{-- @if (!Session::has('user'))
                     <li class="dropdown">
                         <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="true">

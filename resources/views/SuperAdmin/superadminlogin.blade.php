@@ -9,7 +9,7 @@ Super Admin Login
 <div class="container" style="max-width: 500px;min-width:300px; min-height:300px; margin-top:100px">
     <div class="wrapper" >
         <div class="title"><span>Login Form</span></div>
-        <form action="adminlogin" method="POST">
+        <form action="superadminlogin" method="POST">
             @csrf
         @if(Session::has('fail'))
         <div class="alert alert-danger">{{  Session::get('fail')}}</div>
@@ -19,11 +19,10 @@ Super Admin Login
 
         <div class="row">
           <i class="fas fa-user"></i>
-          <input name="email" type="email" placeholder="Email" value="{{ old('email') }}" required>
+          <input name="gmail" type="email" placeholder="Email" value="{{ old('email') }}" required>
           <span class="text-danger">@error('email') {{ $message }} @enderror</span>
         </div>
         <div class="dropdown-divider"></div>
-
 
         <div class="row">
           <i class="fas fa-lock"></i>

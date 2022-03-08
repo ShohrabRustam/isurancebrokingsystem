@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\SuperAdminController;
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\UserController;
 use App\Models\user_registration;
@@ -71,3 +72,10 @@ Route::get('adminlogin', function () {
 Route::get('superadminhome',function(){
     return view('SuperAdmin.home');
 });
+
+Route::get('superadminlogin',function()
+{
+    return view('SuperAdmin.superadminlogin');
+});
+
+Route::post('superadminlogin',[SuperAdminController::class,'superadminlogin']);
