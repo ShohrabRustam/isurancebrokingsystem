@@ -51,7 +51,7 @@ body {
 }
 .hero-img-container > img {
   margin-left: -10rem;
-  margin-top: 7rem;
+  /* margin-top: 7rem; */
   width: 500px;
 }
 .features-section {
@@ -87,7 +87,7 @@ body {
 .feature-item > h1 {
   color: hsl(256, 26%, 20%);
   margin-bottom: 15px;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 .feature-item > p {
   color: hsl(273, 4%, 51%);
@@ -170,7 +170,7 @@ body {
   cursor: pointer;
 }
     body {
-    background-color: rgb(211, 233, 182);
+    /* background-color: rgb(211, 233, 182); */
     display: flex;
     flex-direction: column;
     color: rebeccapurple;

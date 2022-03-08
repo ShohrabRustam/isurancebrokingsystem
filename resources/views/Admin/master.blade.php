@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.72.0">
-  <title>Album example · Bootstrap</title>
+  <title>@yield('title')</title>
 
   <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/album/">
 
@@ -24,12 +24,17 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
-
 </head>
 
 <body>
     @include('Admin.header')
+
+
+
+    @yield('section')
 {{--
+
+
   <main>
 
     <section class="py-5 text-center container">

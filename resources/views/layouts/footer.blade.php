@@ -5,7 +5,7 @@
     <div class="footer-copyright text-center py-3">© <script>document.write(new Date().getFullYear());</script> Copyright:
       <a href="/"> IBS.com </a>
         <br>
-      <a href="index"> Admin </a>
+      <a href="admin"> Admin </a>
 
     </div>
     <!-- Copyright -->

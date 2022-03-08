@@ -12,8 +12,8 @@ Login
     echo $data;
 @endphp --}}
 
-<div class="container" style="max-width: 500px;min-width:300px; min-height:300px;">
-    <div class="wrapper">
+<div class="container" style="max-width: 500px;min-width:300px; min-height:300px; margin-top:100px">
+    <div class="wrapper" >
         <div class="title"><span>Login Form</span></div>
         <form action="login" method="POST">
             @csrf
@@ -34,12 +34,15 @@ Login
           <input name="password" type="password" placeholder="Password" required >
           <span class="text-danger">@error('password') {{ $message }} @enderror</span>
         </div>
+        <div class="dropdown-divider"></div>
 
         <div class="pass"><a href="#">Forgot password?</a></div>
+        <div class="dropdown-divider"></div>
 
         <div class="row button">
           <input type="submit" value="Login">
         </div>
+        <div class="dropdown-divider"></div>
 
         <div class="signup-link">Not a member? <a href="registration">Signup now</a></div>
       </form>

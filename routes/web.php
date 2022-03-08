@@ -59,10 +59,5 @@ Route::get('logout', function(){
 
 Route::post('registration',[UserController::class,'registration']);
 
-Route::get('admin',function(){
-
-    return view('Admin.master');
-
-});
-
+Route::get('admin',[adminController::class,'adminindex']);
 
