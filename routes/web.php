@@ -71,7 +71,7 @@ Route::get('logout', function () {
 Route::get('adminhome', [adminController::class, 'adminhome']);
 
 Route::get('adminlogin', function () {
-    return view('adminlogin');
+    return view('Admin.adminlogin');
 });
 
 // Route::get('adminregistration',[SuperAdminController::class,'adminregistration']);
