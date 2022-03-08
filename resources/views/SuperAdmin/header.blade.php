@@ -247,6 +247,8 @@ ul li:hover{
         /* overflow: hidden; */
         background-color: #333333;
         text-align: center;
+        height: 50px;
+
     }
 
     li {
@@ -361,10 +363,10 @@ ul li:hover{
                     <li class="dropdown">
                         <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="true">
-                            Session::get('user')['name']
+                           {{   Session::get('user')['name']}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="logout">
+                            <a class="dropdown-item" href="superadminlogout">
                                 <li>Log Out</li>
                             </a>
                             <div class="dropdown-divider"></div>

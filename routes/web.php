@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Session;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return view('home');
 });
@@ -45,22 +46,22 @@ Route::get('login', function () {
     return view('login');
 });
 
-Route::post('login', [UserController::class,'login']);
+Route::post('login', [UserController::class, 'login']);
 
 
 Route::get('registration', function () {
     return view('registration');
 });
 
-Route::get('logout', function(){
+Route::get('logout', function () {
     Session::forget('user');
     return redirect('login');
 });
 
 
-Route::post('registration',[UserController::class,'registration']);
+Route::post('registration', [UserController::class, 'registration']);
 
-Route::get('admin',[adminController::class,'adminindex']);
+Route::get('admin', [adminController::class, 'adminindex']);
 
 Route::get('adminlogin', function () {
     return view('adminlogin');
@@ -69,13 +70,38 @@ Route::get('adminlogin', function () {
 
 //Super Admin
 
-Route::get('superadminhome',function(){
-    return view('SuperAdmin.home');
+Route::get('superadminhome', function () {
+    if (Session::has('user')) {
+        return view('SuperAdmin.home');
+    }
+    return redirect('superadminlogin');
 });
 
-Route::get('superadminlogin',function()
-{
+Route::get('superadminlogin', function () {
     return view('SuperAdmin.superadminlogin');
 });
 
-Route::post('superadminlogin',[SuperAdminController::class,'superadminlogin']);
+Route::post('superadminlogin', [SuperAdminController::class, 'superadminlogin']);
+
+Route::get('adminlist', function () {
+    if (Session::has('user')) {
+    return view('SuperAdmin.adminlist');
+    }
+    else{
+        return redirect('superadminlogin');
+    }
+});
+
+
+Route::get('userlist', function () {
+    if (Session::has('user')) {
+        return view('SuperAdmin.userlist');
+    } else {
+        return view('SuperAdmin.superadminlogin');
+    }
+});
+
+Route::get('superadminlogout', function () {
+    Session::forget('user');
+    return redirect('superadminlogin');
+});

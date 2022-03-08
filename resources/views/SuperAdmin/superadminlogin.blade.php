@@ -9,7 +9,7 @@ Super Admin Login
 <div class="container" style="max-width: 500px;min-width:300px; min-height:300px; margin-top:100px">
     <div class="wrapper" >
         <div class="title"><span>Login Form</span></div>
-        <form action="superadminlogin" method="POST">
+        <form action="" method="POST">
             @csrf
         @if(Session::has('fail'))
         <div class="alert alert-danger">{{  Session::get('fail')}}</div>
