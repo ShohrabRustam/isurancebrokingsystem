@@ -1,10 +1,10 @@
-@extends('SuperAdmin.adminsignup')
+@extends('SuperAdmin.master')
 
 @section('title')
 Admin Registration
 @endsection
 @section('section')
-<div class="container" style="max-width: 500px;min-width:300px; min-height:300px;">
+<div class="container" style="max-width: 500px;min-width:300px; min-height:300px;margin-top: 40px;">
     <div class="wrapper">
         <div class="title"><span>Admin Registration Form</span></div>
         <form action="adminregistration" method="POST">

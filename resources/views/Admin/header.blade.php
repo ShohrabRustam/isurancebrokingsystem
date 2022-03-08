@@ -307,7 +307,7 @@ ul li:hover{
             <div class="container">
                 <ul>
                     <li>
-                        <a href="#" class="navbar-brand d-flex align-items-center">
+                        <a href="adminhome" class="navbar-brand d-flex align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
                                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true"
                                 class="mr-2" viewBox="0 0 24 24">
@@ -318,6 +318,8 @@ ul li:hover{
                             m <strong class="text-primary">Brockerage</strong>
                         </a>
                     </li>
+                    <li> <a href="adminhome">Insurance Request</a></li>
+
                     <li> <a href="#">Insurance Request</a></li>
                     <li> <a href="#">Claim Request</a></li>
                     {{-- <li class="dropdown">
@@ -377,7 +379,7 @@ ul li:hover{
                         </li>
                     @endif --}}
                     @if (!Session::has('user'))
-                    <li><a href="#">Login</a></li>
+                    <li><a href="adminlogin">Login</a></li>
 
                         {{-- <li class="dropdown">
                             <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"

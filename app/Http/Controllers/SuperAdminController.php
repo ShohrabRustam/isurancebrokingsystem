@@ -10,10 +10,6 @@ use App\Models\admin;
 
 class SuperAdminController extends Controller
 {
-    //
-    public function superadminhome(){
-        return view('SuperAdmin.home');
-    }
 
     public function superadminlogin(Request $req){
         $req->validate([
@@ -35,8 +31,10 @@ class SuperAdminController extends Controller
         }
     }
 
-    public function adminregistration (Request $req){
-       return  $req;
+
+    public function adminregistration ()
+    {
+       return  view('SuperAdmin.adminregistration');
     }
 
 }
