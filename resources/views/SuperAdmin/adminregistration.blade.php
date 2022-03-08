@@ -6,8 +6,8 @@ Admin Registration
 @section('section')
 <div class="container" style="max-width: 500px;min-width:300px; min-height:300px;">
     <div class="wrapper">
-        <div class="title"><span>Login Form</span></div>
-        <form action="registration" method="POST">
+        <div class="title"><span>Admin Registration Form</span></div>
+        <form action="adminregistration" method="POST">
             @csrf
 
         @if(Session::has('fail'))
