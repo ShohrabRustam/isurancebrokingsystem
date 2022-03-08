@@ -353,6 +353,7 @@ ul li:hover{
                         </a>
                     </ul>
                 </li>
+                <li class="btn "><a href="superadminlogin">Super Login</a></li>
             {{-- @if (!Session::has('user'))
                     <li class="dropdown">
                         <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
