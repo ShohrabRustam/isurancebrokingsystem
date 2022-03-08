@@ -71,8 +71,10 @@ Route::get('adminlogin', function () {
 //Super Admin
 
 //home page of the super admin
-Route::get('superadminhome', function () {
-    if (Session::has('user')) {
+Route::get('superadminhome', function ()
+{
+    if (Session::has('user'))
+    {
         return view('SuperAdmin.home');
     }
     return redirect('superadminlogin');
@@ -105,8 +107,24 @@ Route::get('userlist', function () {
     }
 });
 
+//To registeration form for admin registration by the Super admin
+Route::get('adminregistration',function(){
+    if (Session::has('user'))
+        {
+        return view('SuperAdmin.adminregistration');
+        }
+        else{
+            return view ('SuperAdmin.superadminlogin');
+        }
+});
+
+Route::post('adminregistration',[SuperAdminController::class,'adminregistration']);
+
 //logout the super admin
-Route::get('superadminlogout', function () {
+Route::get('superadminlogout', function ()
+{
     Session::forget('user');
     return redirect('superadminlogin');
 });
+
+

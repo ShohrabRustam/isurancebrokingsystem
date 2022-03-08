@@ -6,6 +6,7 @@ Super Admin Login
 
 @section('section')
 
+<h1 style="text-align: center">Super Admin Login</h1>
 <div class="container" style="max-width: 500px;min-width:300px; min-height:300px; margin-top:100px">
     <div class="wrapper" >
         <div class="title"><span>Login Form</span></div>

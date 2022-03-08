@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\superadmin;
+use Laravel\Ui\Presets\React;
+use App\Models\admin;
 
 class SuperAdminController extends Controller
 {
@@ -31,6 +33,10 @@ class SuperAdminController extends Controller
             $req->session()->put('user',$user);
             return redirect('superadminhome');
         }
+    }
+
+    public function adminregistration (Request $req){
+       return  $req;
     }
 
 }

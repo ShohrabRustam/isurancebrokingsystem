@@ -16,7 +16,7 @@ Registration
 @endphp --}}
 {{-- {{ $data }} --}}
 
-<div class="container" style="max-width: 500px;min-width:300px; min-height:300px;">
+<div class="container" style="max-width: 500px;min-width:300px; min-height:300px; margin-top: 60px;">
     <div class="wrapper">
         <div class="title"><span>Login Form</span></div>
         <form action="registration" method="POST">
