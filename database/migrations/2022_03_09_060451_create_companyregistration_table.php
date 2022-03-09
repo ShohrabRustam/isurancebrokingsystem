@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('companyregistration', function (Blueprint $table) {
             $table->id();
+            $table->integer('register_number')->unique();
+            $table->string('name');
+            $table->string('logo');
+            $table->string('about');
             $table->timestamps();
         });
     }

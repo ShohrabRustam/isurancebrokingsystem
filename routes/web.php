@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Session;
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
+|@auther Rustam
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
@@ -85,6 +86,10 @@ Route::get('claimrequest', [adminController::class, 'claimrequest']);
 
 //company page
 Route::get('company', [adminController::class, 'company']);
+
+Route::get('company_registration',function(){
+    return view('Admin.company_registration');
+});
 
 //admin login page
 Route::get('adminlogin', function () {
