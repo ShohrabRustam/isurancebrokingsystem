@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Models\admin;
+use App\Models\companyregistration;
 
 
 class adminController extends Controller
@@ -17,7 +18,6 @@ class adminController extends Controller
         return view('Admin.adminHome');
         }
             return redirect('adminlogin');
-
     }
 
     public function adminlogin(Request $request){
@@ -50,25 +50,52 @@ class adminController extends Controller
     }
 
     public function insurancerequest(){
-        if (Session::has('user')) {
+        if (Session::has('user') && strpos(Session::get('user')['name'], 'admin')!==false )
+        {
             return view('Admin.insurancerequest');
         }
         return redirect('adminlogin');
     }
 
     public function claimrequest(){
-        if (Session::has('user')) {
+        if (Session::has('user') && strpos(Session::get('user')['name'], 'admin')!==false )
+        {
             return view('Admin.claimrequest');
         }
         return redirect('adminlogin');
     }
 
     public function company(){
-        if (Session::has('user')) {
+        if (Session::has('user') && strpos(Session::get('user')['name'], 'admin')!==false )
+        {
             return view('Admin.company');
         }
         return redirect('adminlogin');
     }
+
+    public function companyregistration(Request $request)
+    {
+        if (Session::has('user') && strpos(Session::get('user')['name'], 'admin')!==false )
+        {
+            $request->validate([
+                'register_number'=>'required|unique',
+                'name' => 'required|min:4',
+            ]);
+
+            $com = new companyregistration();
+            $com->register_number=$request->register_number;
+            $com->name=$request->name;
+            $com->logo=$request->logo;
+            $com->about=$request->about;
+            $com->save();
+            return redirect('company');
+        }
+        return redirect('adminlogin');
+
+
+    }
+
+
 
     public function adminlogout(){
         Session::forget('user');

@@ -96,6 +96,8 @@ Route::get('adminlogin', function () {
     return view('Admin.adminlogin');
 });
 
+Route::post('companyregistration',[adminController::class,'companyregistration']);
+
 // login by admin
 Route::post('adminlogin', [adminController::class, 'adminlogin']);
 
