@@ -93,6 +93,7 @@ Route::get('claimrequest', function () {
     }
     return redirect('adminlogin');
 });
+
 // Route::get('adminregistration',[SuperAdminController::class,'adminregistration']);
 
 
@@ -100,12 +101,10 @@ Route::post('adminregistration', [SuperAdminController::class, 'adminregistratio
 
 Route::get('company', function () {
     if (Session::has('user')) {
-        return view('Admin.claimrequest');
+        return view('Admin.company');
     }
     return redirect('adminlogin');
 });
-
-
 
 
 //Super Admin
