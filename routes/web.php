@@ -66,6 +66,10 @@ Route::get('logout', function () {
     return redirect('login');
 });
 
+
+
+
+
 //Admin Route
 
 Route::get('adminhome', [adminController::class, 'adminhome']);
@@ -74,49 +78,59 @@ Route::get('adminlogin', function () {
     return view('Admin.adminlogin');
 });
 
-Route::post('adminlogin',[adminController::class,'adminlogin']);
+Route::post('adminlogin', [adminController::class, 'adminlogin']);
 
-Route::get('insurancerequest',function(){
-    if (Session::has('user'))
-    {
+Route::get('insurancerequest', function () {
+    if (Session::has('user')) {
         return view('Admin.insurancerequest');
     }
     return redirect('adminlogin');
 });
 
-Route::get('claimrequest',function(){
-    if (Session::has('user'))
-    {
+Route::get('claimrequest', function () {
+    if (Session::has('user')) {
         return view('Admin.claimrequest');
     }
     return redirect('adminlogin');
 });
 // Route::get('adminregistration',[SuperAdminController::class,'adminregistration']);
 
-Route::get('adminregistration',function(){
-    return view('SuperAdmin.adminregistration');
+
+Route::post('adminregistration', [SuperAdminController::class, 'adminregistrations']);
+
+Route::get('company', function () {
+    if (Session::has('user')) {
+        return view('Admin.claimrequest');
+    }
+    return redirect('adminlogin');
 });
 
-Route::post('adminregistration',[SuperAdminController::class,'adminregistrations']);
+
 
 
 //Super Admin
 
+//admin registration
+Route::get('adminregistration', [SuperAdminController::class, 'adminregistration']);
+// Route::post('adminregistration',[SuperAdminController::class,'adminregistration']);
+
+
+//superadmin login page
+Route::get('superadminlogin', function () {
+    return view('SuperAdmin.superadminlogin');
+});
+
+
 //home page of the super admin
-Route::get('superadminhome', function ()
-{
-    if (Session::has('user'))
-    {
+Route::get('superadminhome', function () {
+    if (Session::has('user')) {
         return view('SuperAdmin.home');
     }
     return redirect('superadminlogin');
 });
 
-
 //all the user here in admin page
-
-Route::get('userlist', function ()
-{
+Route::get('userlist', function () {
     if (Session::has('user')) {
         return view('SuperAdmin.userlist');
     } else {
@@ -124,34 +138,29 @@ Route::get('userlist', function ()
     }
 });
 
-    Route::get('adminregistration',[SuperAdminController::class,'adminregistration']);
 
-
-    // Route::post('adminregistration',[SuperAdminController::class,'adminregistration']);
-
-    //all the admin here in this link
-    Route::get('adminlist', function () {
-        if (Session::has('user')) {
-            return view('SuperAdmin.adminlist');
-        }
-        else{
-            return redirect('superadminlogin');
-        }
-    });
-
-    //superadmin login page
-    Route::get('superadminlogin', function () {
-        return view('SuperAdmin.superadminlogin');
-    });
-
-    // super admun login authontication page with data base
-    Route::post('superadminlogin', [SuperAdminController::class, 'superadminlogin']);
-
-    //logout the super admin
-    Route::get('superadminlogout', function ()
-    {
-        Session::forget('user');
+//all the admin here in this link
+Route::get('adminlist', function () {
+    if (Session::has('user')) {
+        return view('SuperAdmin.adminlist');
+    } else {
         return redirect('superadminlogin');
-    });
+    }
+});
 
 
+//for admin registration
+Route::get('adminregistration', function () {
+    return view('SuperAdmin.adminregistration');
+});
+
+
+// super admun login authontication page with data base
+Route::post('superadminlogin', [SuperAdminController::class, 'superadminlogin']);
+
+
+//logout the super admin
+Route::get('superadminlogout', function () {
+    Session::forget('user');
+    return redirect('superadminlogin');
+});
