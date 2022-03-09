@@ -318,7 +318,7 @@ ul li:hover{
                             m <strong class="text-primary">Brockerage</strong>
                         </a>
                     </li>
-                    <li> <a href="adminhome">Insurance Request</a></li>
+                    <li> <a href="adminhome">Home</a></li>
 
                     <li> <a href="#">Insurance Request</a></li>
                     <li> <a href="#">Claim Request</a></li>

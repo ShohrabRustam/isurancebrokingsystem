@@ -42,7 +42,7 @@ Admin Registration
         </div>
         <div class="row">
             <i class="fas fa-lock"></i>
-            <input name="confirm_password" type="password" placeholder="Confirm Password" required>
+            <input name="confirm_password" type="password" placeholder="Confirm Password" required="required">
             <span class="text-danger">@error('confirm_password') {{ $message }}    @enderror</span>
           </div>
           <br>

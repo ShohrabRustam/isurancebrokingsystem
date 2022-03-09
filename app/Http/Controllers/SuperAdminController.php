@@ -50,12 +50,13 @@ class SuperAdminController extends Controller
             "mobile"=>  "required",
             "confirm_password" => "required_with:password|same:password|min:6"
         ]);
-        $admin = new admin();
-        $admin->name=$req->name;
-        $admin->email->$req->email;
-        $admin->mobile=$req->mobile;
-        $admin->password=$req->password;
-        $admin->save();
+        // return $req;
+        $adm = new admin();
+        $adm->name=$req->name;
+        $adm->email=$req->email;
+        $adm->mobile=$req->mobile;
+        $adm->password=$req->password;
+        $adm->save();
         return redirect('Admin.adminlogin');
 
     }
