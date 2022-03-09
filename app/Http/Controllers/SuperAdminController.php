@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Session;
 class SuperAdminController extends Controller
 {
     public function superadminhome(){
-        if (Session::has('user')) {
+        if (Session::has('user') && Session::get('user')['gmail']=='superadmin@gmail.com') {
             return view('SuperAdmin.home');
         }
         return redirect('superadminlogin');
     }
 
     public function userlist(){
-        if (Session::has('user')) {
+        if (Session::has('user') && Session::get('user')['gmail']=='superadmin@gmail.com') {
             return view('SuperAdmin.userlist');
         } else {
             return redirect('superadminlogin');
@@ -28,7 +28,7 @@ class SuperAdminController extends Controller
     }
 
     public function adminlist(){
-        if (Session::has('user')) {
+        if (Session::has('user') && Session::get('user')['gmail']=='superadmin@gmail.com') {
             return view('SuperAdmin.adminlist');
         } else {
             return redirect('superadminlogin');
@@ -57,8 +57,7 @@ class SuperAdminController extends Controller
 
 
     public function adminregistration(){
-        if (Session::has('user'))
-        {
+        if (Session::has('user') && Session::get('user')['gmail']=='superadmin@gmail.com') {
          return  view('SuperAdmin.adminregistration');
         }
         return redirect('superadminlogin');
@@ -73,7 +72,7 @@ class SuperAdminController extends Controller
             "mobile"=>  "required",
             "confirm_password" => "required_with:password|same:password|min:6"
         ]);
-        // return $req;
+        if (Session::has('user') && Session::get('user')['gmail']=='superadmin@gmail.com') {
         $adm = new admin();
         $adm->name=$req->name;
         $adm->email=$req->email;
@@ -81,12 +80,16 @@ class SuperAdminController extends Controller
         $adm->password=$req->password;
         $adm->save();
         return redirect('adminlogin');
+        }
 
     }
 
-    public function superadminlogout(){
+    public function superadminlogout()
+    {
+        if (Session::has('user') && Session::get('user')['gmail']=='superadmin@gmail.com') {
         Session::forget('user');
         return redirect('superadminlogin');
+        }
     }
 
 }
