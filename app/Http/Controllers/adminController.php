@@ -9,9 +9,10 @@ use App\Models\admin;
 
 class adminController extends Controller
 {
+    // preg_match('/\badmin\b/', Session::get('user')['name'])
     //
     public function adminhome(){
-        if (Session::has('user'))
+        if (Session::has('user') && strpos(Session::get('user')['name'], 'admin')!==false )
         {
         return view('Admin.adminHome');
         }
