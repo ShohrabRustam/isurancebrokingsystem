@@ -65,7 +65,8 @@ class adminController extends Controller
         return redirect('adminlogin');
     }
 
-    public function company(){
+    public function company()
+    {
         if (Session::has('user') && strpos(Session::get('user')['name'], 'admin')!==false )
         {
             return view('Admin.company');
@@ -78,7 +79,7 @@ class adminController extends Controller
         if (Session::has('user') && strpos(Session::get('user')['name'], 'admin')!==false )
         {
             $request->validate([
-                'register_number'=>'required|unique',
+                'register_number'=>'required|unique:companyregistration',
                 'name' => 'required|min:4',
             ]);
 
