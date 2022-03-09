@@ -281,7 +281,7 @@ ul li:hover{
 </script>
 
 
-    <header>
+    <header style="margin-bottom: 30px;">
         <div class="collapse bg-dark" id="navbarHeader">
             <div class="container">
                 {{-- <div class="row">
@@ -301,7 +301,6 @@ ul li:hover{
               </div> --}}
             </div>
         </div>
-        </div>
         <nav class="navbar navbar-dark bg-dark shadow-sm">
 
             <div class="container">
@@ -309,19 +308,19 @@ ul li:hover{
                     <li>
                         <a href="adminhome" class="navbar-brand d-flex align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true"
-                                class="mr-2" viewBox="0 0 24 24">
-                                <path
-                                    d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-                                <circle cx="12" cy="13" r="4" />
-                            </svg>
-                            m <strong class="text-primary">Brockerage</strong>
-                        </a>
-                    </li>
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true"
+                            class="mr-2" viewBox="0 0 24 24">
+                            <path
+                            d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                            <circle cx="12" cy="13" r="4" />
+                        </svg>
+                        m <strong class="text-primary">Brockerage</strong>
+                    </a>
+                </li>
                     <li> <a href="adminhome">Home</a></li>
 
-                    <li> <a href="#">Insurance Request</a></li>
-                    <li> <a href="#">Claim Request</a></li>
+                    <li> <a href="insurancerequest">Insurance Request</a></li>
+                    <li> <a href="claimrequest">Claim Request</a></li>
                     {{-- <li class="dropdown">
                         <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
@@ -347,7 +346,7 @@ ul li:hover{
                             </a>
                         </ul>
                     </li> --}}
-                    <li><a href="#">Add Company</a></li>
+                    <li><a href="#">Company</a></li>
                     {{-- @if (Session::has('user'))
                         <li class="dropdown">
                             <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"

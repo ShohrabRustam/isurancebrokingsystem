@@ -75,6 +75,22 @@ Route::get('adminlogin', function () {
 });
 
 Route::post('adminlogin',[adminController::class,'adminlogin']);
+
+Route::get('insurancerequest',function(){
+    if (Session::has('user'))
+    {
+        return view('Admin.insurancerequest');
+    }
+    return redirect('adminlogin');
+});
+
+Route::get('claimrequest',function(){
+    if (Session::has('user'))
+    {
+        return view('Admin.claimrequest');
+    }
+    return redirect('adminlogin');
+});
 // Route::get('adminregistration',[SuperAdminController::class,'adminregistration']);
 
 Route::get('adminregistration',function(){

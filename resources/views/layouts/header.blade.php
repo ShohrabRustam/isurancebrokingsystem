@@ -320,6 +320,9 @@ ul li:hover{
                             m <strong class="text-primary">Brockerage</strong>
                         </a>
                     </li>
+                    @if (Session::has('user'))
+                    <li><a href="#"><strong class="text-info">Welcome </strong> <strong class="text-primary">{{ Session::get('user')['name'] }}</strong> </a></li>
+                    @endif
                     <li> <a href="/">Home </a></li>
                     <li> <a href="about">About</a></li>
                     <li class="dropdown">
