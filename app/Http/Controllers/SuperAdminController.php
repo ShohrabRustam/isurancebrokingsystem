@@ -57,7 +57,7 @@ class SuperAdminController extends Controller
         $adm->mobile=$req->mobile;
         $adm->password=$req->password;
         $adm->save();
-        return redirect('Admin.adminlogin');
+        return redirect('adminlogin');
 
     }
 

@@ -74,6 +74,7 @@ Route::get('adminlogin', function () {
     return view('Admin.adminlogin');
 });
 
+Route::post('adminlogin',[adminController::class,'adminlogin']);
 // Route::get('adminregistration',[SuperAdminController::class,'adminregistration']);
 
 Route::get('adminregistration',function(){
