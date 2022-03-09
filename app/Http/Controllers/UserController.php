@@ -5,29 +5,42 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\user_registration;
 use Illuminate\Support\Facades\Hash;
-
+use PhpParser\Node\Expr\FuncCall;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
-    public function login(Request $req){
-        $req->validate([
-            'email'=>'required|email',
-            'password' => 'required|min:4|max:16'
-        ]);
 
-        $user= user_registration::where(['email'=>$req->email])->first();
-        if(!$user || ($req->password!=$user->password) ){
-            return back()->with("fail" ,"Email or Password is not Match");
-        }
-        else
-        {
-            $req->session()->put('user',$user);
-            return redirect('/');
-        }
-        // return $req;
-
-
+    public function home(){
+        return view('home');
     }
+
+    public function about(){
+        return view('about');
+    }
+
+    public function contact(){
+        return view('contact');
+    }
+
+    public function HealthInsurance()
+    {
+        return view('InsuranceType.health');
+    }
+
+    public function LifeInsurance()
+    {
+        return view('InsuranceType.life');
+    }
+
+    public function BikeInsurance(){
+        return view('InsuranceType.bike');
+    }
+
+    public function CarInsurance(){
+        return view('InsuranceType.car');
+    }
+
     public function registration(Request $req){
 
         $req->validate([
@@ -57,6 +70,32 @@ class UserController extends Controller
 
 
 
+    }
+
+
+    public function login(Request $req){
+        $req->validate([
+            'email'=>'required|email',
+            'password' => 'required|min:4|max:16'
+        ]);
+
+        $user= user_registration::where(['email'=>$req->email])->first();
+        if(!$user || ($req->password!=$user->password) ){
+            return back()->with("fail" ,"Email or Password is not Match");
+        }
+        else
+        {
+            $req->session()->put('user',$user);
+            return redirect('/');
+        }
+        // return $req;
+
+
+    }
+
+    public function logout(){
+        Session::forget('user');
+        return redirect('superadminlogin');
     }
     //
 }

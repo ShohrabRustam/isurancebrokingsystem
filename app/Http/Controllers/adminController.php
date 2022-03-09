@@ -25,7 +25,7 @@ class adminController extends Controller
             'email'=>'required|email',
             'password' => 'required|min:4|max:16'
         ]);
-        // return $req;
+        // return $request;
         $admin= admin::where(['email'=>$request->email])->first();
         if(!$admin || ($request->password!=$admin->password) ){
             // return 'hello';
@@ -47,6 +47,31 @@ class adminController extends Controller
 
 
     }
-    // public
+
+    public function insurancerequest(){
+        if (Session::has('user')) {
+            return view('Admin.insurancerequest');
+        }
+        return redirect('adminlogin');
+    }
+
+    public function claimrequest(){
+        if (Session::has('user')) {
+            return view('Admin.claimrequest');
+        }
+        return redirect('adminlogin');
+    }
+
+    public function company(){
+        if (Session::has('user')) {
+            return view('Admin.company');
+        }
+        return redirect('adminlogin');
+    }
+
+    public function adminlogout(){
+        Session::forget('user');
+        return redirect('adminhome');
+    }
 
 }

@@ -403,7 +403,7 @@ ul li:hover{
                                 {{ Session::get('user')['name'] }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="logout">
+                                <a class="dropdown-item" href="adminlogout">
                                     <li>Log Out</li>
                                 </a>
                                 {{-- <div class="dropdown-divider"></div> --}}

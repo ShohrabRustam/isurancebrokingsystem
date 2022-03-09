@@ -12,6 +12,28 @@ use Illuminate\Support\Facades\Session;
 
 class SuperAdminController extends Controller
 {
+    public function superadminhome(){
+        if (Session::has('user')) {
+            return view('SuperAdmin.home');
+        }
+        return redirect('superadminlogin');
+    }
+
+    public function userlist(){
+        if (Session::has('user')) {
+            return view('SuperAdmin.userlist');
+        } else {
+            return redirect('superadminlogin');
+        }
+    }
+
+    public function adminlist(){
+        if (Session::has('user')) {
+            return view('SuperAdmin.adminlist');
+        } else {
+            return redirect('superadminlogin');
+        }
+    }
 
     public function superadminlogin(Request $req){
         $req->validate([
@@ -32,6 +54,7 @@ class SuperAdminController extends Controller
             return redirect('superadminhome');
         }
     }
+
 
     public function adminregistration(){
         if (Session::has('user'))
@@ -61,6 +84,9 @@ class SuperAdminController extends Controller
 
     }
 
-
+    public function superadminlogout(){
+        Session::forget('user');
+        return redirect('superadminlogin');
+    }
 
 }
