@@ -29,7 +29,7 @@
                 <div class="dropdown-divider"></div>
 
                 <div class="row">
-                    <select name="type" id="cars" placeholder="Select Policy" required>
+                    <select name="type"  id="cars" placeholder="Select Policy" required>
                         <option value="">Select Insurance</option>
                         <option value="Health">Health</option>
                         <option value="Life">Life</option>
