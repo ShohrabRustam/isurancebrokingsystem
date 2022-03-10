@@ -81,6 +81,9 @@ class SuperAdminController extends Controller
         $adm->save();
         return redirect('adminlogin');
         }
+        else{
+            return redirect('superadminlogin');
+        }
 
     }
 

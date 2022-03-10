@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -67,9 +68,15 @@ class adminController extends Controller
 
     public function company()
     {
+        // $users = DB::table('registerationcompany')->get();
+        $data = registerationcompany::all();
+            // echo "<pre>";
+            // var_dump($data);
+
+
         if (Session::has('user') && strpos(Session::get('user')['name'], 'admin')!==false )
         {
-            return view('Admin.company');
+            return view('Admin.company')->with('data',$data);
         }
         return redirect('adminlogin');
     }
@@ -78,7 +85,14 @@ class adminController extends Controller
     {
 
         $com = new registerationcompany();
-        return $request;
+        $com->register_number=$request->register_number;
+        $com->name=$request->name;
+        $com->logo=$request->logo;
+        $com->about=$request->about;
+        $com->save();
+        return redirect('company');
+
+
     }
 
     public function adminlogout()

@@ -20,7 +20,7 @@ Company Registration
 
         <div class="row">
           <i class="fas fa-user"></i>
-          <input name="register_number" type="number" placeholder="Register Number" required min="0">
+          <input name="register_number" type="number" placeholder="Register Number" required min=0>
           <span class="text-danger">@error('register_number') {{ $message }} @enderror</span>
         </div>
         <div class="dropdown-divider"></div>
