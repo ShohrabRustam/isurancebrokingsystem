@@ -28,6 +28,7 @@
 
 <body>
     @include('Admin.header')
+    @include('layouts.style')
 
 
 

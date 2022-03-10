@@ -91,6 +91,7 @@ Route::get('companyregistration',function(){
     return view('Admin.company_registration');
 });
 
+Route::post('companyregistration',[adminController::class,'companyregistration']);
 //admin login page
 Route::get('adminlogin', function () {
     return view('Admin.adminlogin');

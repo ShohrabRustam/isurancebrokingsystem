@@ -86,10 +86,9 @@ class SuperAdminController extends Controller
 
     public function superadminlogout()
     {
-        if (Session::has('user') && Session::get('user')['gmail']=='superadmin@gmail.com') {
+
         Session::forget('user');
         return redirect('superadminlogin');
-        }
     }
 
 }
