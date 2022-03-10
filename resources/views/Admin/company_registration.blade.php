@@ -46,7 +46,9 @@ Company Registration
 
         <div class="row">
             <i class="fas fa-user"></i>
-            <input name="about" type="text" placeholder="About Company" required>
+            <label for="about">About Company :</label>
+            <textarea name="about" rows="4" cols="50" placeholder="About Company" >
+            </textarea>
             <span class="text-danger">@error('about') {{ $message }} @enderror</span>
         </div>
         <div class="dropdown-divider"></div>

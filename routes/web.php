@@ -87,7 +87,7 @@ Route::get('claimrequest', [adminController::class, 'claimrequest']);
 //company page
 Route::get('company', [adminController::class, 'company']);
 
-Route::get('company_registration',function(){
+Route::get('companyregistration',function(){
     return view('Admin.company_registration');
 });
 

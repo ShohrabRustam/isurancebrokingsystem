@@ -4,7 +4,7 @@ Company
 @endsection
 @section('section')
 <h1>This is company page</h1>
-<a href="company_registration" class="btn btn-primary center" style="margin-left:50px; ">Add Company</a>
+<a href="companyregistration" class="btn btn-primary center" style="margin-left:50px; ">Add Company</a>
 <table class="table">
     <thead>
         <tr>
