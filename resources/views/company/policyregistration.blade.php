@@ -20,7 +20,7 @@
             </table>
 
             <br>
-            <form action="policyregistration/{id}" method="POST">
+            <form action="" method="POST">
                 @csrf
                 @if (Session::has('fail'))
                     <div class="alert alert-danger">{{ Session::get('fail') }}</div>

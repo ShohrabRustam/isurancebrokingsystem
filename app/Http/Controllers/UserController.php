@@ -93,9 +93,9 @@ class UserController extends Controller
 
     }
 
-    public function logout(){
+    public function logout()
+    {
         Session::forget('user');
-        return redirect('superadminlogin');
+        return redirect('login');
     }
-    //
 }

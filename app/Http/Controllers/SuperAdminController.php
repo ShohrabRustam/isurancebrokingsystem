@@ -57,13 +57,14 @@ class SuperAdminController extends Controller
 
 
     public function adminregistration(){
-        if (Session::has('user') && Session::get('user')['gmail']=='superadmin@gmail.com') {
+        if (Session::has('user') && Session::get('user')['gmail'] == 'superadmin@gmail.com') {
          return  view('SuperAdmin.adminregistration');
         }
         return redirect('superadminlogin');
     }
 
     public function adminregistrations(Request $req){
+        return $req;
 
         $req->validate([
             "name" => "required|min:3",

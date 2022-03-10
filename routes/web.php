@@ -138,6 +138,7 @@ Route::get('policyregistration/{id}',function($id){
 
     return view('company.policyregistration')->with('companyid',$companyid);
 });
+
 //policyregistration page
 Route::post('policyregistration',[adminController::class,'policyregistration']);
 
@@ -192,4 +193,7 @@ Route::post('superadminlogin', [SuperAdminController::class, 'superadminlogin'])
 //logout the super admin
 Route::get('superadminlogout',[SuperAdminController::class,'superadminlogout']);
 
-
+//page not found
+Route::fallback(function(){
+    return view('welcome');
+});
