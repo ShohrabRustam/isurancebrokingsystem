@@ -27,10 +27,10 @@ Company
             <td>{{ $item['register_number'] }}</td>
             <td>{{ $item['name'] }}</td>
             <td>{{ $item['about'] }}</td>
-            <td><button class="btn btn-info">  View Policy</button></td>
-            <td><button class="btn btn-info">  Add Policy</button></td>
-            <td><button class="btn btn-primary">Edit Company</button></td>
-            <td><button class="btn btn-danger">Delete Company</button></td>
+            <td><a href="viewpolicy/{{ $item['id'] }}"><button class="btn btn-info">  View Policy </button></a></td>
+            <td> <a href="policyregistration/{{ $item['id'] }}"><button class="btn btn-info">  Add Policy</button></a></td>
+            <td><a href="editpolicy/{{ $item['id'] }}"><button class="btn btn-primary"> Edit Policy</button></a> </td>
+            <td><a href="policyregistration/{{ $item['id'] }}"><button class="btn btn-danger">  Add Policy</button></a></td>
         </tr>
         @endforeach
     </tbody>

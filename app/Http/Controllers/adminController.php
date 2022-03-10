@@ -92,7 +92,14 @@ class adminController extends Controller
         $com->save();
         return redirect('company');
 
+    }
 
+    public function policyregistration($id)
+    {
+
+        return registerationcompany::find($id);
+
+        return view('Admin.policyregistration');
     }
 
     public function adminlogout()

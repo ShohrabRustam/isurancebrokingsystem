@@ -20,10 +20,12 @@ use Illuminate\Support\Facades\Session;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+######################################################################################################################################################################
 // @auther Rustam
-
+######################################################################################################################################################################
 //user route
+
+// user home
 Route::get('/', [UserController::class, 'home']);
 
 //About page
@@ -63,16 +65,23 @@ Route::post('login', [UserController::class, 'login']);
 //logout for user
 Route::get('logout', [UserController::class, 'logout']);
 
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|@auther Rustam
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
 #################################################################################################################################################################
 //@auther Rustam
 #################################################################################################################################################################
-/*
-**
-**
-**
-**
-**
-*/
+
 //Admin Route
 
 //admin home page
@@ -84,12 +93,6 @@ Route::get('insurancerequest', [adminController::class,'insurancerequest']);
 // admin claimrequest page
 Route::get('claimrequest', [adminController::class, 'claimrequest']);
 
-//company page
-Route::get('company', [adminController::class, 'company']);
-
-Route::get('companyregistration',function(){
-    return view('Admin.company_registration');
-});
 
 Route::post('companyregistration',[adminController::class,'companyregistration']);
 //admin login page
@@ -104,9 +107,53 @@ Route::post('adminlogin', [adminController::class, 'adminlogin']);
 Route::get('adminlogout', [adminController::class,'adminlogout']);
 
 
-#####################################################################################################################################################################
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|@auther Rustam
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+######################################################################################################################################################################
 //@auther Rustam
-#####################################################################################################################################################################
+######################################################################################################################################################################
+//Company
+
+//company page
+Route::get('company', [adminController::class, 'company']);
+
+//company registration
+Route::get('companyregistration',function(){
+    return view('Admin.company_registration');
+});
+
+//policyregistration page
+Route::get('policyregistration/{id}',[adminController::class,'policyregistration']);
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|@auther Rustam
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+######################################################################################################################################################################
+//@auther Rustam
+######################################################################################################################################################################
+
 
 //Super Admin
 
@@ -138,3 +185,5 @@ Route::post('superadminlogin', [SuperAdminController::class, 'superadminlogin'])
 
 //logout the super admin
 Route::get('superadminlogout',[SuperAdminController::class,'superadminlogout']);
+
+

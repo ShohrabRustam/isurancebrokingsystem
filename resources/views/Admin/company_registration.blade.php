@@ -52,10 +52,14 @@ Company Registration
             <span class="text-danger">@error('about') {{ $message }} @enderror</span>
         </div>
         <div class="dropdown-divider"></div>
+
+        <div class="form-group">
+        <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms &amp; Conditions</a></label>
+        </div>
         <div class="dropdown-divider"></div>
 
         <div class="row button">
-          <input type="submit" value="Login">
+          <input type="submit" value="Registration">
           <div class="dropdown-divider"></div>
         </div>
 
