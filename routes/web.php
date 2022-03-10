@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\UserController;
 use App\Models\superadmin;
 use App\Models\user_registration;
+use App\Models\registerationcompany;
 use Illuminate\Support\Facades\Session;
 
 
@@ -129,11 +130,16 @@ Route::get('company', [adminController::class, 'company']);
 
 //company registration
 Route::get('companyregistration',function(){
-    return view('Admin.company_registration');
+    return view('company.company_registration');
 });
 
+Route::get('policyregistration/{id}',function($id){
+    $companyid =registerationcompany::find($id);
+
+    return view('company.policyregistration')->with('companyid',$companyid);
+});
 //policyregistration page
-Route::get('policyregistration/{id}',[adminController::class,'policyregistration']);
+Route::post('policyregistration',[adminController::class,'policyregistration']);
 
 
 

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Models\admin;
 use App\Models\registerationcompany;
-
+use Mockery\Generator\Method;
 
 class adminController extends Controller
 {
@@ -76,14 +76,13 @@ class adminController extends Controller
 
         if (Session::has('user') && strpos(Session::get('user')['name'], 'admin')!==false )
         {
-            return view('Admin.company')->with('data',$data);
+            return view('company.company')->with('data',$data);
         }
         return redirect('adminlogin');
     }
 
     public function companyregistration(Request $request)
     {
-
         $com = new registerationcompany();
         $com->register_number=$request->register_number;
         $com->name=$request->name;
@@ -94,10 +93,9 @@ class adminController extends Controller
 
     }
 
-    public function policyregistration($id)
+    public function policyregistration(Request $request)
     {
-
-        return registerationcompany::find($id);
+        return $request;
 
         return view('Admin.policyregistration');
     }

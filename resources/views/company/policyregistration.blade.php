@@ -6,15 +6,28 @@
 @section('section')
     <div class="container" style="max-width: 500px;min-width:300px; min-height:300px; margin-top:100px">
         <div class="wrapper">
-            <div class="title"><span>Company Registration Form</span></div>
+            <div class="title"><span>Policy Registration Form</span></div>
+            <div class="dropdown-divider"></div>
+
+            <table class="table table-light">
+                <tbody>
+                    <tr>
+                        <td scope="row"><img src="{{ $companyid['logo'] }}" class="img-fluid|thumbnail rounded-top|rounded-end|rounded-bottom|rounded-start|rounded-circle|" alt="image" style="height: 30px; width:70px"></td>
+                        <td>{{ $companyid['name'] }}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+
             <br>
-            <form action="companyregistration" method="POST">
+            <form action="policyregistration/{id}" method="POST">
                 @csrf
                 @if (Session::has('fail'))
                     <div class="alert alert-danger">{{ Session::get('fail') }}</div>
                 @elseif(Session::has('sucess'))
                     <div class="alert alert-danger">{{ Session::get('sucess') }}</div>
                 @endif
+                <input type="hidden"  name="companyid" value="{{ $companyid['id'] }}">
 
                 <div class="row">
                     <i class="fas fa-user"></i>
@@ -26,10 +39,9 @@
                     </span>
                 </div>
                 <div class="dropdown-divider"></div>
-                <div class="dropdown-divider"></div>
 
                 <div class="row">
-                    <select name="type"  id="cars" placeholder="Select Policy" required>
+                    <select name="policytype"  placeholder="Select Policy" required>
                         <option value="">Select Insurance</option>
                         <option value="Health">Health</option>
                         <option value="Life">Life</option>
@@ -39,12 +51,11 @@
 
                 </div>
                 <div class="dropdown-divider"></div>
-                <div class="dropdown-divider"></div>
 
                 <div class="row">
                     <i class="fas fa-user"></i>
                     <label for="about">Policy Desc :</label>
-                    <textarea name="policy_desc" rows="4" cols="50" placeholder="About Company">
+                    <textarea name="policydesc" rows="4" cols="50" placeholder="About Company">
                 </textarea>
                     <span class="text-danger">
                         @error('policy_desc')
@@ -52,7 +63,6 @@
                         @enderror
                     </span>
                 </div>
-                <div class="dropdown-divider"></div>
                 <div class="dropdown-divider"></div>
 
                 <div class="row">
@@ -65,7 +75,6 @@
                     </span>
                 </div>
                 <div class="dropdown-divider"></div>
-                <div class="dropdown-divider"></div>
 
                 <div class="row">
                     <i class="fas fa-user"></i>
@@ -76,6 +85,20 @@
                         @enderror
                     </span>
                 </div>
+
+                <div class="dropdown-divider"></div>
+
+                <div class="row">
+                    <i class="fas fa-user"></i>
+                    <input name="timeperiod" type="number" placeholder="Time Period Months" required min="1">
+                    <span class="text-danger">
+                        @error('timeperiod')
+                            {{ $message }}
+                        @enderror
+                    </span>
+                </div>
+
+                <div class="dropdown-divider"></div>
 
                 <div class="form-group">
                     <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a
