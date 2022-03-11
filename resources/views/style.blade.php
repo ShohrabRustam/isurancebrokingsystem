@@ -180,6 +180,21 @@ select{
     color: white;
     background-color: #141e30
 }
-
+.footer {
+  background-color: rgba(0, 0, 0, 0.103);
+  height: 45vh;
+}
+.footer-menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer{
+    text-align: center;
+    background-color: rgb(247, 232, 233);
+    width: 100vw;
+    height: 5rem;
+    margin-top: auto;
+}
 
 </style>
