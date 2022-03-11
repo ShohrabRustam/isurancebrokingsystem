@@ -60,7 +60,7 @@
       </div>
       <a href="#"><label class="checkbox-inline"><input type="checkbox" required="required"> I accept the   Terms &amp; Conditions</label></a>
 
-      <a href="#" type="submit">
+      <a href="registration" type="submit">
         <span></span>
         <span></span>
         <span></span>
