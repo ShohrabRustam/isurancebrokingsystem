@@ -179,7 +179,7 @@ Route::get('adminregistration', function () {
 });
 
 //admin registration
-Route::post('adminregistration', [SuperAdminController::class, 'adminregistration']);
+Route::post('adminregistration', [SuperAdminController::class, 'adminregistrations']);
 
 //superadmin login page
 Route::get('superadminlogin', function () {
