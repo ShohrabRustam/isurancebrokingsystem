@@ -17,7 +17,7 @@ Company Registration
     <form action="companyregistration" method="POST">
         @csrf
       <div class="user-box">
-        <input name="register_number" type="number" placeholder="Register Number" required min=0>
+        <input name="register_number" type="number" required min=0>
         <label>Register Number</label>
 
     </div>
@@ -33,11 +33,11 @@ Company Registration
 
     </div>
     <div class="user-box">
-        <input name="about" rows="4" cols="50" >
+        <input name="about"  type="text" required >
         <label>About Company</label>
 
     </div>
-      <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the   Terms &amp; Conditions</label>
+     <a href="#"><label class="checkbox-inline"><input type="checkbox" required="required"> I accept the   Terms &amp; Conditions</label></a>
 
       <a href="#" type="submit">
         <span></span>

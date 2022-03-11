@@ -20,6 +20,10 @@ body {
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
+  position: relative;
+  margin-bottom: 130px;
+    margin-top: ‒10;
+
 }
 
 .login-box h2 {
