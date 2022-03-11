@@ -6,6 +6,7 @@
 }
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(238, 232, 222);
 }
 .nav-bar {
   display: flex;

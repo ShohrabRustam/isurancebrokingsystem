@@ -133,7 +133,7 @@ Route::get('companyregistration',function(){
     return view('company.company_registration');
 });
 
-Route::get('policyregistration/{id}',function($id){
+Route::get('policyregistration/{id?}',function($id){
     $companyid =registerationcompany::find($id);
 
     return view('company.policyregistration')->with('companyid',$companyid);

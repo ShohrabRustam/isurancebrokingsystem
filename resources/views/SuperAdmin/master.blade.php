@@ -28,6 +28,7 @@
       {{-- set the header  --}}
 @include('SuperAdmin.header')
 
+
     @yield('section')
 
 {{-- set the footer  --}}
