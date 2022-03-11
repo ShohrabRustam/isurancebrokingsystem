@@ -37,7 +37,7 @@ Admin Registration
         <input name="confirm_password" type="password"  required="required">
         <label>confirm_password</label>
       </div>
-      <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the   Terms &amp; Conditions</label>
+      <a href="#"><label class="checkbox-inline"><input type="checkbox" required="required"> I accept the   Terms &amp; Conditions</label></a>
 
       <a href="#" type="submit">
         <span></span>

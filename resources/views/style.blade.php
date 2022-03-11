@@ -22,8 +22,6 @@ body {
   border-radius: 10px;
   position: relative;
   margin-bottom: 130px;
-    margin-top: ‒10;
-
 }
 
 .login-box h2 {
@@ -175,6 +173,12 @@ input{
     background: transparent;
 
 }
-
+select{
+    width: 327px;
+    height: 36px;
+    margin-bottom: 15px;
+    color: white;
+    background-color: #141e30
+}
 
 </style>
