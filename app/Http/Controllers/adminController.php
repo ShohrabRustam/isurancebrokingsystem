@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
  use App\Models\admin;
 use App\Models\registerationcompany;
 use Mockery\Generator\Method;
+use App\Models\policyregistration;
+
 
 class adminController extends Controller
 {
@@ -95,7 +97,20 @@ class adminController extends Controller
 
     public function policyregistration(Request $request)
     {
+        $policy = new policyregistration();
+
+        $policy->companyid=$request->companyid;
+        $policy->policyname=$request->policyname;
+        $policy->policytype=$request->policytype;
+        $policy->policydesc=$request->policydesc;
+        $policy->policyprice=$request->policyprice;
+        $policy->claimprice=$request->claimprice;
+        $policy->timeperiod=$request->timeperiod;
+        $policy->save();
+        return redirect('company');
         return $request;
+
+
 
         return view('Admin.policyregistration');
     }

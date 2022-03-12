@@ -144,7 +144,7 @@ Route::get('policyregistration/{id?}',function($id){
 });
 
 //policyregistration page
-// Route::post('policyregistration',[adminController::class,'policyregistration']);
+Route::post('policyregistration',[adminController::class,'policyregistration']);
 
 // Route::post('policyregistration',function(){
 //     // $companyid =registerationcompany::find($id);
