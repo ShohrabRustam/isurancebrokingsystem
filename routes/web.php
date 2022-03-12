@@ -24,8 +24,8 @@ use Illuminate\Support\Facades\Session;
 ######################################################################################################################################################################
 // @auther Rustam
 ######################################################################################################################################################################
-//user route
-
+#@all about user page
+######################################################################################################################################################################
 // user home
 Route::get('/', [UserController::class, 'home']);
 
@@ -82,8 +82,8 @@ Route::get('logout', [UserController::class, 'logout']);
 #################################################################################################################################################################
 //@auther Rustam
 #################################################################################################################################################################
-
-//Admin Route
+#@Admin Pages Route
+##################################################################################################################################################################
 
 //admin home page
 Route::get('adminhome', [adminController::class, 'adminhome']);
@@ -96,6 +96,10 @@ Route::get('claimrequest', [adminController::class, 'claimrequest']);
 
 
 Route::post('companyregistration',[adminController::class,'companyregistration']);
+
+######################################################################################################################################################################
+#admin login pages
+######################################################################################################################################################################
 //admin login page
 Route::get('adminlogin', function () {
     return view('Admin.adminlogin');
@@ -123,9 +127,9 @@ Route::get('adminlogout', [adminController::class,'adminlogout']);
 ######################################################################################################################################################################
 //@auther Rustam
 ######################################################################################################################################################################
-//Company
+#@about Company Page
+#####################################################################################################################################################################
 
-//company page
 Route::get('company', [adminController::class, 'company']);
 
 //company registration
@@ -140,10 +144,68 @@ Route::get('policyregistration/{id?}',function($id){
 });
 
 //policyregistration page
-Route::post('policyregistration',[adminController::class,'policyregistration']);
+// Route::post('policyregistration',[adminController::class,'policyregistration']);
+
+// Route::post('policyregistration',function(){
+//     // $companyid =registerationcompany::find($id);
+//     dd("HELLO");
+//     return view('company.policyregistration')->with('companyid',$companyid);
+// })->name('hello');
 
 
+Route::post('policyregistration',[adminController::class,'policyregistration'])->name('policyregistration');
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|@auther Rustam
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+######################################################################################################################################################################
+//@auther Rustam
+######################################################################################################################################################################
+
+######################################################################################################################################################################
+//Super Admin
+#####################################################################################################################################################################
+//home page of the super admin
+Route::get('superadminhome', [SuperAdminController::class,'superadminhome']);
+
+//all the user details
+Route::get('userlist', [SuperAdminController::class,'userlist']);
+
+//all the admin here in this link
+Route::get('adminlist', [SuperAdminController::class,'adminlist']);
+
+//for admin registration form
+Route::get('adminregistration', function () {
+    return view('SuperAdmin.adminregistration');
+});
+
+//admin registration
+Route::post('adminregistration', [SuperAdminController::class, 'adminregistrations']);
+
+######################################################################################################################################################################
+#@superadmin login and logouts
+######################################################################################################################################################################
+
+
+//superadmin login page
+Route::get('superadminlogin', function () {
+    return view('SuperAdmin.superadminlogin');
+});
+
+// super admun login authontication page with data base
+Route::post('superadminlogin', [SuperAdminController::class, 'superadminlogin']);
+
+
+//logout the super admin
+Route::get('superadminlogout',[SuperAdminController::class,'superadminlogout']);
 
 
 /*
@@ -162,38 +224,7 @@ Route::post('policyregistration',[adminController::class,'policyregistration']);
 ######################################################################################################################################################################
 
 
-//Super Admin
-
-//home page of the super admin
-Route::get('superadminhome', [SuperAdminController::class,'superadminhome']);
-
-//all the user details
-Route::get('userlist', [SuperAdminController::class,'userlist']);
-
-//all the admin here in this link
-Route::get('adminlist', [SuperAdminController::class,'adminlist']);
-
-//for admin registration form
-Route::get('adminregistration', function () {
-    return view('SuperAdmin.adminregistration');
-});
-
-//admin registration
-Route::post('adminregistration', [SuperAdminController::class, 'adminregistrations']);
-
-//superadmin login page
-Route::get('superadminlogin', function () {
-    return view('SuperAdmin.superadminlogin');
-});
-
-// super admun login authontication page with data base
-Route::post('superadminlogin', [SuperAdminController::class, 'superadminlogin']);
-
-
-//logout the super admin
-Route::get('superadminlogout',[SuperAdminController::class,'superadminlogout']);
-
-//page not found
+//if the page not found then fall back will be exacute
 Route::fallback(function(){
     return view('welcome');
 });

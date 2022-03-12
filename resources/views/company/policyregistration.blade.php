@@ -22,7 +22,7 @@
         </tbody>
     </table>
 
-    <form action="policyregistration" method="POST">
+    <form action={{ route('policyregistration') }} method="POST">
         @csrf
         <input type="hidden"  name="companyid" value="{{ $companyid['id'] }}">
       <div class="user-box">
@@ -32,7 +32,7 @@
       <div class="user-box">
         <select name="policytype"  placeholder="Select Policy" required >
             <option value="" >Select Insurance</option>
-            <option value="Health">Health</option>
+            <option value="Health">Health</option>policyregistration
             <option value="Life">Life</option>
             <option value="Bike">Bike</option>
             <option value="Car">Car</option>
