@@ -18,7 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('companyid');
             $table->foreign('companyid')->references('id')->on('registerationcompany');
             $table->string('policyname');
-            $table->string('policytype');
+            // $table->string('policytype');
+            $table->enum('policytype', ['Health', 'Life', 'Bike','Car']);
             $table->longText('policydesc');
             $table->double('policyprice');
             $table->double('claimprice');
