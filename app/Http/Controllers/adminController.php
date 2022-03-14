@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
  use App\Models\admin;
-use App\Models\registerationcompany;
+use App\Models\registrationcompany;
 use Mockery\Generator\Method;
 use App\Models\policyregistration;
 
@@ -71,7 +71,7 @@ class adminController extends Controller
     public function company()
     {
         // $users = DB::table('registerationcompany')->get();
-        $data = registerationcompany::all();
+        $data = registrationcompany::all();
             // echo "<pre>";
             // var_dump($data);
 
@@ -85,7 +85,7 @@ class adminController extends Controller
 
     public function companyregistration(Request $request)
     {
-        $com = new registerationcompany();
+        $com = new registrationcompany();
         $com->register_number=$request->register_number;
         $com->name=$request->name;
         $com->logo=$request->logo;
