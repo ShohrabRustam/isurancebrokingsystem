@@ -266,11 +266,11 @@ ul li:hover{
     }
 
     li a:hover {
-        background-color: #111111;
+        background-color: #0be0fc;
     }
 
     ul li:hover {
-        background-color: #a675f7;
+        background-color: #0be0fc;
     }
 
 </style>

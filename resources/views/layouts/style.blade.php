@@ -6,6 +6,7 @@
 }
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(238, 232, 222);
 }
 .nav-bar {
   display: flex;
@@ -118,67 +119,67 @@ body {
   outline: none;
   font-weight: 500;
 }
-.footer {
-  background-color: rgba(0, 0, 0, 0.103);
-  height: 45vh;
-}
 .footer-section {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .logo-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
-
-.footer-menu-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 .menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 .menu > h1 {
-  font-size: 26px;
-  font-weight: 700;
-  padding-bottom: 20px;
-  color: hsl(256, 26%, 20%);
+    font-size: 26px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    color: hsl(256, 26%, 20%);
 }
 .menu-items {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 .menu-items > a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: hsl(256, 26%, 20%);
-  font-weight: 500;
-  padding-bottom: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: hsl(256, 26%, 20%);
+    font-weight: 500;
+    padding-bottom: 10px;
 }
 .social-container > img {
-  margin-left: 10px;
-  cursor: pointer;
+    margin-left: 10px;
+    cursor: pointer;
 }
-    body {
+body {
+
     /* background-color: rgb(211, 233, 182); */
     display: flex;
     flex-direction: column;
     color: rebeccapurple;
     height: 100vh;
 }
+.footer {
+  background-color: rgba(0, 0, 0, 0.103);
+  height: 45vh;
+}
+.footer-menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 footer{
     text-align: center;
-    background-color: rgb(231, 191, 252);
+    background-color: rgb(247, 232, 233);
     width: 100vw;
     height: 5rem;
     margin-top: auto;

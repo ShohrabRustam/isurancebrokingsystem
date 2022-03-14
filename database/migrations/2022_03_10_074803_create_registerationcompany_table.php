@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('registerationcompany', function (Blueprint $table) {
+        Schema::create('registrationcompany', function (Blueprint $table) {
             $table->id();
             $table->integer('register_number')->unique();
             $table->string('name');
-            $table->string('logo');
+            $table->string('logo')->default('https://policyflow.co.uk/img/features-idea-bulb-single.png');
             $table->longText('about');
             $table->timestamps();
         });

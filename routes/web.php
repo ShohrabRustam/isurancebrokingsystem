@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\UserController;
 use App\Models\superadmin;
 use App\Models\user_registration;
+use App\Models\registrationcompany;
 use Illuminate\Support\Facades\Session;
 
 
@@ -20,10 +21,12 @@ use Illuminate\Support\Facades\Session;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+######################################################################################################################################################################
 // @auther Rustam
-
-//user route
+######################################################################################################################################################################
+#@all about user page
+######################################################################################################################################################################
+// user home
 Route::get('/', [UserController::class, 'home']);
 
 //About page
@@ -63,17 +66,24 @@ Route::post('login', [UserController::class, 'login']);
 //logout for user
 Route::get('logout', [UserController::class, 'logout']);
 
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|@auther Rustam
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
 #################################################################################################################################################################
 //@auther Rustam
 #################################################################################################################################################################
-/*
-**
-**
-**
-**
-**
-*/
-//Admin Route
+#@Admin Pages Route
+##################################################################################################################################################################
 
 //admin home page
 Route::get('adminhome', [adminController::class, 'adminhome']);
@@ -84,13 +94,12 @@ Route::get('insurancerequest', [adminController::class,'insurancerequest']);
 // admin claimrequest page
 Route::get('claimrequest', [adminController::class, 'claimrequest']);
 
-//company page
-Route::get('company', [adminController::class, 'company']);
 
-Route::get('companyregistration',function(){
-    return view('Admin.company_registration');
-});
+Route::post('companyregistration',[adminController::class,'companyregistration']);
 
+######################################################################################################################################################################
+#admin login pages
+######################################################################################################################################################################
 //admin login page
 Route::get('adminlogin', function () {
     return view('Admin.adminlogin');
@@ -103,12 +112,67 @@ Route::post('adminlogin', [adminController::class, 'adminlogin']);
 Route::get('adminlogout', [adminController::class,'adminlogout']);
 
 
-#####################################################################################################################################################################
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|@auther Rustam
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+######################################################################################################################################################################
 //@auther Rustam
+######################################################################################################################################################################
+#@about Company Page
 #####################################################################################################################################################################
 
-//Super Admin
+Route::get('company', [adminController::class, 'company']);
 
+//company registration
+Route::get('companyregistration',function(){
+    return view('company.company_registration');
+});
+
+Route::get('policyregistration/{id?}',function($id){
+    $companyid =registrationcompany::find($id);
+
+    return view('company.policyregistration')->with('companyid',$companyid);
+});
+
+//policyregistration page
+Route::post('policyregistration',[adminController::class,'policyregistration']);
+
+// Route::post('policyregistration',function(){
+//     // $companyid =registrationcompany::find($id);
+//     dd("HELLO");
+//     return view('company.policyregistration')->with('companyid',$companyid);
+// })->name('hello');
+
+
+Route::post('policyregistration',[adminController::class,'policyregistration'])->name('policyregistration');
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|@auther Rustam
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+######################################################################################################################################################################
+//@auther Rustam
+######################################################################################################################################################################
+
+######################################################################################################################################################################
+//Super Admin
+#####################################################################################################################################################################
 //home page of the super admin
 Route::get('superadminhome', [SuperAdminController::class,'superadminhome']);
 
@@ -124,7 +188,12 @@ Route::get('adminregistration', function () {
 });
 
 //admin registration
-Route::post('adminregistration', [SuperAdminController::class, 'adminregistration']);
+Route::post('adminregistration', [SuperAdminController::class, 'adminregistrations']);
+
+######################################################################################################################################################################
+#@superadmin login and logouts
+######################################################################################################################################################################
+
 
 //superadmin login page
 Route::get('superadminlogin', function () {
@@ -137,3 +206,25 @@ Route::post('superadminlogin', [SuperAdminController::class, 'superadminlogin'])
 
 //logout the super admin
 Route::get('superadminlogout',[SuperAdminController::class,'superadminlogout']);
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|@auther Rustam
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+######################################################################################################################################################################
+//@auther Rustam
+######################################################################################################################################################################
+
+
+//if the page not found then fall back will be exacute
+Route::fallback(function(){
+    return view('welcome');
+});

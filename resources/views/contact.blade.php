@@ -13,8 +13,8 @@ Contact
     background-color: white;
     margin-top: 30px;
     padding-top: 15px;
-    padding-bottom: 15px;
-">
+    padding-bottom: 15px;">
+
 
     <!--Google map-->
   <div id="map-container-google-1" class="z-depth-1-half map-container">

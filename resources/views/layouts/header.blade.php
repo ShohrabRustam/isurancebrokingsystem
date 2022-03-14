@@ -327,7 +327,7 @@ ul li:hover{
                     <li> <a href="about">About</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
+                            aria-expanded="false" style="color: white;">
                             Insurance Type
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -336,8 +336,7 @@ ul li:hover{
                             <li> Life Insurance </li>
                         </a>
                             <a class="dropdown-item" href="HealthInsurance">
-                                <li>Health Insurance
-                                <li>
+                                <li>Health Insurance</li>
                             </a>
                             <a class="dropdown-item" href="CarInsurance">
                                 <li>Car Insurance </li>
@@ -384,7 +383,7 @@ ul li:hover{
                     @if (!Session::has('user'))
                         <li class="dropdown">
                             <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="true">
+                                aria-expanded="true" style="color: white;">
                                 Login/SignUp </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="login">
@@ -401,7 +400,7 @@ ul li:hover{
                     @else
                         <li class="dropdown">
                             <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="true">
+                                aria-expanded="true" style="color: white">
                                 {{ Session::get('user')['name'] }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">

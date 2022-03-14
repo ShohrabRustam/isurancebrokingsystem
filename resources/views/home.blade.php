@@ -52,7 +52,7 @@ Home
 
     <div class="col" style="width: auto; margin:3rem; ">
         <div class="card"  style="width: 20rem; background-color:rgb(225, 224, 233); border-radius:20px">
-            <a href="BikeInsurance" >
+            <a href="CarInsurance" >
             <img src="https://images.ctfassets.net/uwf0n1j71a7j/3hsbWvbJauXM1g4VTLDn6A/c0bdbe4ea5cf6b57e0547db4e268d95b/motor-insurance-policy-online.png" class="card-img-top" alt="..." style="    max-width:20rem;    max-height:10rem; min-width:20rem; min-height:10rem; border-radius:20px; background-color:rgb(9, 15, 1); ">
             <div class="card-body">
               <h5 class="card-title">Car Insurance</h5>
@@ -62,10 +62,9 @@ Home
             </div>
           </div>
     </div>
-
     <div class="col"  style="width: auto; margin:3rem; ">
         <div class="card" style="width: 20rem;background-color:rgb(225, 224, 233); border-radius:20px ">
-            <a href="CarInsurance" >
+            <a href="BikeInsurance" >
             <img src="https://www.bharti-axagi.co.in/drupal_backend/sites/default/files/2019-07/vector-smart-object%402x.png" class="card-img-top" alt="..." style="max-width:20rem; max-height:10rem; min-width:20rem; min-height:10rem;  border-radius:20px; background-color:rgb(9, 15, 1);">
             <div class="card-body">
               <h5 class="card-title">Bike Insurance</h5>

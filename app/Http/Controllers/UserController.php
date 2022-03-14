@@ -7,6 +7,7 @@ use App\Models\user_registration;
 use Illuminate\Support\Facades\Hash;
 use PhpParser\Node\Expr\FuncCall;
 use Illuminate\Support\Facades\Session;
+use App\Models\policyregistration;
 
 class UserController extends Controller
 {
@@ -25,20 +26,35 @@ class UserController extends Controller
 
     public function HealthInsurance()
     {
-        return view('InsuranceType.health');
+        $data = policyregistration::all();
+        // return $data[1];
+        // return dd($data['policyname']);
+        // echo "<pre>";
+        // return $data[0]['policyname'];
+
+        // var_dump($data->policyname);
+        // die;
+
+        return view('InsuranceType.health')->with('data',$data);
     }
 
     public function LifeInsurance()
     {
-        return view('InsuranceType.life');
+        $data = policyregistration::all();
+
+        return view('InsuranceType.life')->with('data',$data);
     }
 
     public function BikeInsurance(){
-        return view('InsuranceType.bike');
+        $data = policyregistration::all();
+
+        return view('InsuranceType.bike')->with('data',$data);
     }
 
     public function CarInsurance(){
-        return view('InsuranceType.car');
+        $data = policyregistration::all();
+
+        return view('InsuranceType.car')->with('data',$data);
     }
 
     public function registration(Request $req){
@@ -93,9 +109,9 @@ class UserController extends Controller
 
     }
 
-    public function logout(){
+    public function logout()
+    {
         Session::forget('user');
-        return redirect('superadminlogin');
+        return redirect('login');
     }
-    //
 }

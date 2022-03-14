@@ -28,9 +28,11 @@
 
 <body>
     @include('Admin.header')
+    @include('animationstyle')
+    @include('layouts.style')
 
 
-
+    @include('animation')
     @yield('section')
 {{--
 
