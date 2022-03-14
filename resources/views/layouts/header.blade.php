@@ -336,8 +336,7 @@ ul li:hover{
                             <li> Life Insurance </li>
                         </a>
                             <a class="dropdown-item" href="HealthInsurance">
-                                <li>Health Insurance
-                                <li>
+                                <li>Health Insurance</li>
                             </a>
                             <a class="dropdown-item" href="CarInsurance">
                                 <li>Car Insurance </li>
