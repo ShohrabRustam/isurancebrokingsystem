@@ -32,7 +32,7 @@
       <div class="user-box">
         <select name="policytype"  placeholder="Select Policy" required >
             <option value="" >Select Insurance</option>
-            <option value="Health">Health</option>policyregistration
+            <option value="Health">Health</option>
             <option value="Life">Life</option>
             <option value="Bike">Bike</option>
             <option value="Car">Car</option>
